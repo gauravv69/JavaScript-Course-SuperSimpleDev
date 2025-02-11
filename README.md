@@ -1,2 +1,2 @@
-# Amazon-JS
-A replica of Amazon shopping website built using HTML, CSS, JavaScript
+# JavaScript-Course-SuperSimpleDev
+JavaScript Course with Projects introduced by SuperSimpleDev
