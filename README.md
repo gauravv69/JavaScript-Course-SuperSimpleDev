@@ -1,2 +1,2 @@
-# JavaScript-Tutorial-SuperSimpleDev
-JavaScript Tutorial with Projects introduced by SuperSimpleDev
+# JavaScript-Course-SuperSimpleDev
+JavaScript Course with Projects introduced by SuperSimpleDev
