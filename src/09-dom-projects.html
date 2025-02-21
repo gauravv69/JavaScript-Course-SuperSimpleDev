@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Projects</title>
+    </head>
+    <body>
+
+        <p>YouTube Subscribe Button</p>
+
+        <button onclick="
+        subscibe();
+        " class="js-subscribe-button">
+            Subscribe
+        </button>
+
+        <p>Amazon Shipping Calculator</p>
+        <input placeholder="Cost of order"
+         class="js-cost-input" onkeydown="
+            handleCostKeydown(event);
+        ">
+        <button onclick="
+            calculateTotal();
+        ">Calculate</button>
+        <p class="js-total-cost"></p>
+
+        <script>
+            // We don't have to type "window." JavaScript will automatically add it. It's an built-in object.
+            window.document     
+            window.console.log('window');
+            window.alert
+
+
+            function handleCostKeydown(event) {
+                if (event.key === 'Enter') {
+                    calculateTotal();
+            }
+            }
+
+            function calculateTotal () {
+                const inputElement = document.querySelector('.js-cost-input');
+                let cost = Number(inputElement.value);      //.value property is used to retrieve or set the value of form elements such as <input>, <textarea>, and <select> elements.
+
+                if (cost < 40) {
+                    cost = cost + 10;
+                }
+
+                document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+            }
+
+            function subscibe() {
+                const buttonElement = document.querySelector('.js-subscribe-button');
+
+                if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+            }   else {
+                buttonElement.innerHTML = 'Subscribe';
+            }
+            }
+
+        </script>
+    </body>
+</html>
