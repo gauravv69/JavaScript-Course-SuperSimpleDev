@@ -8,11 +8,9 @@
       ">
 
     <button onclick="
-      const inputElement = document.querySelector('.js-name-input');
-      document.querySelector('.js-message')
-        .innerHTML = `Your name is: ${inputElement.value}`;
+      displayNameOnclick();
     ">Submit</button>
-
+      
     <p class="js-message"></p>
   </body>
   <script>
@@ -23,6 +21,12 @@
           document.querySelector('.js-message')
             .innerHTML = `Your name is: ${inputElement.value}`;
         }
+    }
+
+    function displayNameOnclick () {
+      const inputElement = document.querySelector('.js-name-input');
+      document.querySelector('.js-message')
+        .innerHTML = `Your name is: ${inputElement.value}`;
     }
 
   </script>
