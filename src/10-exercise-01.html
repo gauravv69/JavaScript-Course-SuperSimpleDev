@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 10/01</title>
+
+        <style>
+
+            body {
+                font-family: Arial;
+            }
+
+            .kart-button {
+                background-color: rgb(255, 216, 20);
+                border: none;
+                border-radius: 25px;
+                padding: 10px;
+                padding: 6px 35px;
+                margin: 25px;
+                display: block;
+                cursor: pointer;
+            }
+
+            .uber-buttons {
+                margin: 25px;
+            }
+
+            .request-button {
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                padding: 12px 18px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            .schedule-button {
+                background-color: rgb(230,230,230);
+                color: black;
+                font-weight: bolder;
+                padding: 12px 18px;
+                border: none;
+                border-radius: 6px;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <button class="kart-button">Add to Cart</button>
+
+        <div class="uber-buttons">
+        <button class="request-button">Request now</button>
+
+        <button class="schedule-button">Schedule for later</button>
+        </div>
+
+        <button class="js-button">Test</button>
+
+        <script>
+
+            const button = document.querySelector('.js-button');
+            console.log(button.classList.contains('js-button'));
+
+        </script>
+    </body>
+</html>
