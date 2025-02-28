@@ -2,52 +2,24 @@
 <htm>
     <head>
         <title>Todo List</title>
+        <link rel="stylesheet" href="styles/11-todo-list.css">
     </head>
     <body>
 
         <p>Todo List</p>
 
-        <input placeholder="Todo name" class="js-name-input">
+        <div class="todo-input-grid">
+        <input placeholder="Todo name" class="js-name-input name-input">
+        <input type="date" class="js-due-date-input due-date-input">
 
         <button onclick="
             addTodo();
-        ">Add</button>
+        "class="add-todo-button">Add</button>
 
-        <div class="js-todo-list"></div>
+        <div class="js-todo-list todo-grid"></div>
 
-        <script>
+        <script src="scripts/11-todo-list.js"></script>
+        </div>
 
-            const todoList = ['make dinner', 'wash dishes'];
-
-            renderTodoList();
-
-            function renderTodoList() {
-                let todoListHTML = '';
-
-                for (let i = 0; i < todoList.length; i++) {
-                    const todo = todoList[i];
-                    const html = `<p>${todo}</p>`;          // Technique for generating HTML
-                    todoListHTML += html;
-                }
-                console.log(todoListHTML);
-
-                document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-            }
-
-            function addTodo() {
-                const inputElement = document.querySelector('.js-name-input');
-                const name = inputElement.value;
-                
-                todoList.push(name);
-                console.log(todoList);
-
-                inputElement.value = '';
-
-                renderTodoList();
-            }
-
-            
-
-        </script>
     </body>
 </htm>
