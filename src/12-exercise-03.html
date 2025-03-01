@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <button class="js-button" onclick="
+                displayMessage();
+            ">Add to cart</button>
+        
+        <p class="js-message"></p>
+
+    </body>
+    <script>
+        let timeoutId;
+
+        function displayMessage () {
+            const button =  document.querySelector('.js-message')
+            button.innerHTML = 'Added';
+
+            // First, cancel the previous timeout so that
+            // it doesn't remove the message too quickly.
+            clearTimeout(timeoutId);
+
+
+            timeoutId = setTimeout(function(){
+                button.innerHTML = '';
+            },2000)
+        }
+
+    </script>
+</html>
