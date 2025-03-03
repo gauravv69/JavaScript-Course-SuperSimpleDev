@@ -5,20 +5,20 @@
     </head>
     <body>
 
-        <button class="js-button" onclick="
-                updateButton();
-            ">Start</button>
+        <button class="js-button">Start</button>
 
         <script>
 
-            function updateButton() {
+            document.querySelector('.js-button')
+            .addEventListener('click', () => {
                 const button = document.querySelector('.js-button');
 
-                button.innerHTML = 'Loading';
-                setTimeout(function() {
-                    button.innerHTML = 'Finished';
-                },1000);
-            }
+          // The function below was changed
+            // to an arrow function.
+            setTimeout(() => {
+                button.innerHTML = 'Finished!';
+            }, 1000);
+            });
 
         </script>
     </body>
